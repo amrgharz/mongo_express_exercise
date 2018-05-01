@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>new app</title>
+</head>
+<body>
+  May Node and Express be with you.
+
+  <ul class="posts">
+  <% for(var i=0; i<posts.length; i++) {%>
+    <li class="posts">
+      <span style='float:left'><%= posts[i].name %></span>
+      <span style='float:right'><%= posts[i].quote %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/posts" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="quote" name="quote">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
